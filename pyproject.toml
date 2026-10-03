@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eventhunter"
+version = "1.0.0"
+description = "Hunt for indicators of compromise in Windows Event Logs (.evtx) and map them to MITRE ATT&CK."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["dfir", "threat-hunting", "windows", "evtx", "mitre-attack", "blue-team"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Intended Audience :: Information Technology",
+    "Topic :: Security",
+]
+dependencies = ["python-evtx>=0.7.4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+eventhunter = "eventhunter.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["eventhunter*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
