@@ -195,7 +195,7 @@ macOS and Windows, so you can analyse evidence on your forensic workstation inst
 compromised host.
 
 ```bash
-git clone https://github.com/<you>/eventhunter.git
+git clone https://github.com/neurbie/eventhunter.git
 cd eventhunter
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -e .            # installs the `eventhunter` command
